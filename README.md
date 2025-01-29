@@ -397,7 +397,7 @@ export class User {
 
   constructor(id, passwordHash, email, fullName) {
     this.id = id;
-    this.passwordHash = passwordHas;
+    this.passwordHash = passwordHash;
     this.email = email;
     this.fullName = fullName;
   }
@@ -421,7 +421,7 @@ export class User {
 
   constructor(id, password, email, fullName) {
     this.id = id;
-    this.passwordHash = password;
+    this.#passwordHash = password;
     this.email = email;
     this.fullName = fullName;
   }
@@ -458,7 +458,7 @@ export class User {
     @Field() createdOn = new Date()
   ) {
     this.id = id;
-    this.passwordHash = password;
+    this.#passwordHash = password;
     this.email = email;
     this.fullName = fullName;
     this.#createdOn = createdOn;
